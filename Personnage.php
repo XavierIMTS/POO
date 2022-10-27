@@ -2,6 +2,8 @@
 
 class Personnage{
 
+    const MAX_VIE= 100;
+
 // Ceci est une propriété
 private int $vie = 80;
 private int $atk = 20;
@@ -15,7 +17,7 @@ public function __construct(string $nom){
 // Ceci est un méthode, une "action" que l'objet pourra effectuer
 public function regenerate(int $vie = null){
     if($vie == null){
-        $this->vie = 100;
+        $this->vie = self::MAX_VIE;
     }
     else{
         $this->vie += $vie;
