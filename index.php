@@ -2,6 +2,7 @@
 require "Personnage.php";
 
 
+
 $merlin = new Personnage("Merlin");
 $merlin->regenerate(20);
 $merlin->Hit();
@@ -17,11 +18,32 @@ echo '<pre>';
     var_dump($harry);
 
 echo '</pre>';
+?>
 
-$form = new Form(array(
-    'username' => 'Roger'
-    ));
+<form action="#" method="get">
+
+<?php
+/**
+ * include class Form
+ */
+require "Form.php";
+require "Text.php";
+/**
+ * create instance
+*/
+$form = new Form($_GET);
+echo $form->input('username');
+echo $form->input('password');
+echo $form->submit();
 
 
+?>
+
+</form>
+
+
+<?php 
+
+var_dump(Text::PublicWithZero((8)));
 
 ?>
