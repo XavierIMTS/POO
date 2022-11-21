@@ -18,8 +18,8 @@ class Form{
         );
     }
 
-    public function submit($name){
-        return $this->surround( '<p><button type="submit>Send</button>');
+    public function submit(){
+        return $this->surround( '<p><button type="submit">Send</button>');
     }
 
     private function  surround($html){
